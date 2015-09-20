@@ -19,19 +19,56 @@
   </head>
   <body>
     <div id="header">
-      <header>
+      <header class="sticky">
+        <img class="img-responsive banner-exit disappear" id="banner-exit" src="assets/exit.png" alt="exit"/>
+        <img class="img-responsive banner-menu minimize-right" id="menu" src="assets/menu.png" alt="menu"/>
         <center>
-          <img class="img-responsive banner-photo" id="kamil" src="assets/kamil.png" alt="Kamil"/>
+          <img class="img-responsive banner-photo minimize-left" id="kamil" src="assets/kamil.png" alt="Kamil"/>
         </center>
         Kamil Has Thoughts
-        <img class="img-responsive banner-menu" id="menu" src="assets/menu.png" alt="menu"/>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <center>
+              <a href="https://twitter.com/KamilsThoughts" class="social-links">
+                <img class="img-responsive banner-smedia disappear" id="banner-twitter" src="assets/twitter-header.png" alt="twitter"/>
+              </a><br>
+              <h3 class="disappear-text social-text" id="banner-twitterhandle">@KamilsThoughts</h3>
+            </center>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <center>
+              <a href="https://www.facebook.com/kamilzkhan" class="social-links">
+                <img class="img-responsive banner-smedia disappear" id="banner-github" src="assets/github-header.png" alt="github"/>
+              </a><br>
+              <h3 class="disappear-text social-text" id="banner-facebookname">kamil1</h3>
+            </center>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <center>
+              <a href="www.github.com/kamil1" class="social-links">
+                <img class="img-responsive banner-smedia disappear" id="banner-facebook" src="assets/facebook-header.png" alt="facebook"/>
+              </a><br>
+              <h3 class="disappear-text social-text" id="banner-githubname">Kamil Khan</h3>
+            </center>
+          </div>
+        </div>
       </header>
-      <img src="assets/big-image.png" idth="782" height="2000" alt="Big Image"/>
+    </div>
+    <div class="container">
+      <div class="row" id="main-content">
+        <div class="col-md-8 col-md-offset-2 card">
+          <div class="col-xs-10 col-xs-offset-1">
+            <h1>Today I Made a Website<br>
+              <small> Saturday, September 19, 2015</small>
+            </h1>
+            <p>I finally did it. All this time I've had thoughts and no where to put them. Today is the day I change that. I have decided to liberate my mind, and expose it to the world for everyone to praise (or critique). I've decided to code it from scratch, using the experience I gained using bootstrap to make <a href="www.ubcaerodesign.com">UBC AeroDesign's webpage</a>, and pair it with the Javascript I learned to make hipster-feed (more on that in a future blog post!). It's fun learning to use jQuery to make things like my super-ridiculously-over-the-top menu bar. Seriously, stop readind this and check it our right now. Cool right? <br><br>Expect this site to contain my progress and thought processes on my various random projects, and philosophies on anything and everything. The site is still in developement, so a lot of functionality isn't working. Of course, it isn't online right now either -- I'm literally writing a post just to see how the formating will fit in -- but once I do upload the site, it still may not be completed. Who knows who may have stumbled accross this website!<br><br>Anyways, I'll keep you all in the loop on my progress. Thanks for checking it, and I hope you enjoy the site!</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/header-menu.js"></script>
+    <script src="js/custom.js"></script>
   </body>
 </html>

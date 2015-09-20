@@ -6819,11 +6819,8 @@ header{
   background: #ffffff;
   color: #000000;
   font-family: monofur;
-  transition: all 0.5s ease;
-}
-
-img {
-  transition: all 0.5s ease;
+  z-index:10;
+  transition: all 0.5s linear;
 }
 
 header.sticky {
@@ -6836,6 +6833,7 @@ header.sticky {
 
 img.minimize-left {
   height:30px;
+  width:30px;
   float:left;
   margin-top:10px;
   margin-left:10px;
@@ -6844,12 +6842,14 @@ img.minimize-left {
 img.minimize-right {
   height:20px;
   float:right;
-  margin-top:-35px;
+  margin-top:15px;
   margin-right:10px;
 }
 
 .banner-photo {
-  height:300px;
+  width:35%;
+  height:auto;
+  max-height:100%;
   vertical-align: top;
   margin-top: 64px;
 }
@@ -6857,5 +6857,69 @@ img.minimize-right {
 .banner-menu {
   height:0;
   vertical-align: top;
+}
+
+.banner-smedia {
+  max-height: 100%;
+  width:80%;
+  display: inline-block;
+  padding: 25px 10px 0px 10px;
+}
+
+@media(max-width:768px) {
+  header {
+    font-size: 56px;
+  }
+  .banner-smedia {
+    width:40%;
+  }
+  a.social-links {
+    padding-left: 5%;
+  }
+  h3.social-text {
+    font-size: 18px;
+  }
+}
+
+.disappear {
+  height:0px;
+  width:0px;
+  visibility: hidden;
+}
+
+h3.disappear-text {
+  font-size: 0;
+  visibility: hidden;
+}
+
+.banner-exit {
+  vertical-align: top;
+  float: right;
+  padding-right:10px;
+  padding-top:10px;
+  height:5%;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid grey;
+  -webkit-box-shadow: 3px 3px 60px -3px rgba(0,0,0,0.48);
+  -moz-box-shadow: 3px 3px 60px -3px rgba(0,0,0,0.48);
+  box-shadow: 3px 3px 60px -3px rgba(0,0,0,0.48);
+  padding: 5px 5px 15px 5px;
+}
+
+#main-content {
+  margin-top: 60px;
+}
+
+.social-links {
+  padding-left:10%;
+}
+
+h3.social-text {
+  font-size: 18px;
+  color: grey;
+  font-family: "Lucida Grande";
 }
 /*# sourceMappingURL=bootstrap.css.map */
