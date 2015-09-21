@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,7 +7,7 @@
     <title>Kamil Has Thoughts</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,10 +27,10 @@
     </script>
     <div id="header">
       <header class="sticky">
-        <img class="img-responsive banner-exit disappear" id="banner-exit" src="assets/exit.png" alt="exit"/>
-        <img class="img-responsive banner-menu minimize-right" id="menu" src="assets/menu.png" alt="menu"/>
+        <img class="img-responsive banner-exit disappear" id="banner-exit" src="../assets/exit.png" alt="exit"/>
+        <img class="img-responsive banner-menu minimize-right" id="menu" src="../assets/menu.png" alt="menu"/>
         <center>
-          <img class="img-responsive banner-photo minimize-left" id="kamil" src="assets/kamil.png" alt="Kamil"/>
+          <img class="img-responsive banner-photo minimize-left" id="kamil" src="../assets/kamil.png" alt="Kamil"/>
         </center>
         <div id="header-title">
           <a class="home-link" href="http://kamilhasthoughts.com">Kamil Has Thoughts</a>
@@ -40,7 +39,7 @@
           <div class="col-xs-12 col-sm-4">
             <center>
               <a href="https://twitter.com/KamilsThoughts" class="social-links">
-                <img class="img-responsive banner-smedia disappear" id="banner-twitter" src="assets/twitter-header.png" alt="twitter"/>
+                <img class="img-responsive banner-smedia disappear" id="banner-twitter" src="../assets/twitter-header.png" alt="twitter"/>
               </a><br>
               <h3 class="disappear-text social-text" id="banner-twitterhandle">@KamilsThoughts</h3>
             </center>
@@ -48,7 +47,7 @@
           <div class="col-xs-12 col-sm-4">
             <center>
               <a href="https://www.facebook.com/kamilzkhan" class="social-links">
-                <img class="img-responsive banner-smedia disappear" id="banner-github" src="assets/github-header.png" alt="github"/>
+                <img class="img-responsive banner-smedia disappear" id="banner-github" src="../assets/github-header.png" alt="github"/>
               </a><br>
               <h3 class="disappear-text social-text" id="banner-facebookname">kamil1</h3>
             </center>
@@ -56,7 +55,7 @@
           <div class="col-xs-12 col-sm-4">
             <center>
               <a href="www.github.com/kamil1" class="social-links">
-                <img class="img-responsive banner-smedia disappear" id="banner-facebook" src="assets/facebook-header.png" alt="facebook"/>
+                <img class="img-responsive banner-smedia disappear" id="banner-facebook" src="../assets/facebook-header.png" alt="facebook"/>
               </a><br>
               <h3 class="disappear-text social-text" id="banner-githubname">Kamil Khan</h3>
             </center>
@@ -68,60 +67,30 @@
       <div class="row card" id="main-content">
         <div class="col-md-8 col-md-offset-2">
           <div class="col-xs-10 col-xs-offset-1">
-            <h1><a href="posts/09-21-15.html">Today I Made Hipster Feed</a><br>
-              <small> Monday, September 21, 2015</small>
-            </h1>
-            <p>After checking out <a href="https://github.com/sferik">sferik</a>'s fantastic <a href="https://github.com/IonicaBizau/image-to-ascii">command-line power tool for Twitter</a>, I wanted to contribute to it by adding image functionality to it ala Twitter's official timeline. I envisioned using ascii art to display the images inline with the tweets. I did a bit of Googling and came across <a href="https://github.com/IonicaBizau">Ionica Bizau</a>'s <a href="https://github.com/IonicaBizau/image-to-ascii">image-to-ascii</a> converter. Wanted to try it out, I decided to make an Instagram client for ANSI consoles to dip my toes in the ascii-art water. After a few hours of work, <a href="https://github.com/Kamil1/hipster-feed">Hipster Feed</a> was born.</p><br>
-            <center>
-              <img src="assets/hipster-feed.png" alt="Hipster Feed output. Try squinting to see it better.">
-            </center>
-            <p>The user interface non-existant, and I haven't even REPL-ized it -- but don't judge! This is my first commandline tool, and my first time using node.js to make anything. Currently, to run the app, you need to pass in an Instagram user acces_token, so that Hipster Feed can include it in it's API calls. This is ugly. That being said, it works, and it was a fun little experiment to do. I'm probably going to work on it a little more and add more commands for users to be able to interact with their accounts better and more comprehensively. For now though, it just a fun little experiment, and a great proof of concept that ascii-rendered images can be used to create richer user experiences for those (few) seeking to access their social media accounts in their console. Code is included below.</p><br>
-            <pre class="code"><code>
-function renderFeed() {
-  var options = {
-    path : "",
-    pxWidth: 6,
-    aRatio : false
-    https.get('https://api.instagram.com/v1/users/self/feed?access_token=' + access_token, function(res) {
-      var body = '';
-
-      res.on('data', function(chunk) {
-        body += chunk;
-        res.on('end', function() {
-          var response = JSON.parse(body);
-          for (var i = 0; i < response["data"].length; i++) {
-            options.path = response["data"][i]["images"]["standard_resolution"]["url"];
-            ImageToAscii(options, function(err, converted) {
-              console.log(err || converted);
-            });
-          }
-        }).on('error', function(e) {
-          console.error(e);
-        });
-      }
-    }
-  }
-}
-            </code></pre>
-            <a href="posts/09-21-15.html">Leave a comment</a>
-          </div>
-        </div>
-      </div>
-      <div class="row card" id="main-content">
-        <div class="col-md-8 col-md-offset-2">
-          <div class="col-xs-10 col-xs-offset-1">
-            <h1><a href="posts/09-19-15.html">Today I Made a Website</a><br>
+            <h1>Today I Made a Website<br>
               <small> Saturday, September 19, 2015</small>
             </h1>
             <p>I finally did it. All this time I've had thoughts and no where to put them. Today is the day I change that. I have decided to liberate my mind, and expose it to the world for everyone to praise (or critique). I've decided to code it from scratch, using the experience I gained using bootstrap to make <a href="www.ubcaerodesign.com">UBC AeroDesign's webpage</a>, and pair it with the Javascript I learned to make hipster-feed (more on that in a future blog post!). It's fun learning to use jQuery to make things like my super-ridiculously-over-the-top menu bar. Seriously, stop readind this and check it our right now. Cool right? <br><br>Expect this site to contain my progress and thought processes on my various random projects, and philosophies on anything and everything. The site is still in developement, so a lot of functionality isn't working. Of course, it isn't online right now either -- I'm literally writing a post just to see how the formating will fit in -- but once I do upload the site, it still may not be completed. Who knows who may have stumbled accross this website!<br><br>Anyways, I'll keep you all in the loop on my progress. Thanks for checking it, and I hope you enjoy the site!</p>
-            <a href="posts/09-19-15.html">Leave a comment</a>
           </div>
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES * * */
+          var disqus_shortname = 'kamilhasthoughts';
+    
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         </div>
       </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="../js/custom.js"></script>
   </body>
 </html>
