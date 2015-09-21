@@ -6995,4 +6995,14 @@ h1 a.hover {
   margin-left: -15%;
   max-width: 130%;
 }
+
+.social-links:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.social-links {
+  text-decoration: none;
+  color: white;
+}
 /*# sourceMappingURL=bootstrap.css.map */
