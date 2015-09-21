@@ -68,6 +68,60 @@
       <div class="row card" id="main-content">
         <div class="col-md-8 col-md-offset-2">
           <div class="col-xs-10 col-xs-offset-1">
+            <h1>Today I Made Hipster Feed<br>
+              <small> Monday, September 21, 2015</small>
+            </h1>
+            <p>After checking out <a href="https://github.com/sferik">sferik</a>'s fantastic <a href="https://github.com/IonicaBizau/image-to-ascii">command-line power tool for Twitter</a>, I wanted to contribute to it by adding image functionality to it ala Twitter's official timeline. I envisioned using ascii art to display the images inline with the tweets. I did a bit of Googling and came across <a href="https://github.com/IonicaBizau">Ionica Bizau</a>'s <a href="https://github.com/IonicaBizau/image-to-ascii">image-to-ascii</a> converter. Wanted to try it out, I decided to make an Instagram client for ANSI consoles to dip my toes in the ascii-art water. After a few hours of work, <a href="https://github.com/Kamil1/hipster-feed">Hipster Feed</a> was born.</p><br>
+            <center>
+              <img src="assets/hipster-feed.png" alt="Hipster Feed output. Try squinting to see it better.">
+            </center>
+            <p>The user interface non-existant, and I haven't even REPL-ized it -- but don't judge! This is my first commandline tool, and my first time using node.js to make anything. Currently, to run the app, you need to pass in an Instagram user acces_token, so that Hipster Feed can include it in it's API calls. This is ugly. That being said, it works, and it was a fun little experiment to do. I'm probably going to work on it a little more and add more commands for users to be able to interact with their accounts better and more comprehensively. For now though, it just a fun little experiment, and a great proof of concept that ascii-rendered images can be used to create richer user experiences for those (few) seeking to access their social media accounts in their console. Code is included below.</p><br>
+            <pre class="code"><code>
+function renderFeed() {
+  var options = {
+    path : "",
+    pxWidth: 6,
+    aRatio : false
+    https.get('https://api.instagram.com/v1/users/self/feed?access_token=' + access_token, function(res) {
+      var body = '';
+
+      res.on('data', function(chunk) {
+        body += chunk;
+        res.on('end', function() {
+          var response = JSON.parse(body);
+          for (var i = 0; i < response["data"].length; i++) {
+            options.path = response["data"][i]["images"]["standard_resolution"]["url"];
+            ImageToAscii(options, function(err, converted) {
+              console.log(err || converted);
+            });
+          }
+        }).on('error', function(e) {
+          console.error(e);
+        });
+      }
+    }
+  }
+}
+            </code></pre>
+          </div>
+        </div>
+        <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES * * */
+          var disqus_shortname = 'kamilhasthoughts';
+    
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+      <div class="row card" id="main-content">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="col-xs-10 col-xs-offset-1">
             <h1>Today I Made a Website<br>
               <small> Saturday, September 19, 2015</small>
             </h1>

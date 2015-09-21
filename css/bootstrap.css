@@ -1580,6 +1580,9 @@ pre code {
   white-space: pre-wrap;
   background-color: transparent;
   border-radius: 0;
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
 }
 .pre-scrollable {
   max-height: 340px;
@@ -6955,5 +6958,11 @@ h3.social-text {
 
 .social-container {
   height: 50%;
+}
+
+.card img {
+  margin-left: -25%;
+  margin-right: -25%;
+  max-width: 150%;
 }
 /*# sourceMappingURL=bootstrap.css.map */
